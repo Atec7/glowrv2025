@@ -12,7 +12,13 @@ body {
     background-color: #fd768e;
     color: black;
 }
-
+.novo{
+  background-color: pink;
+  border-radius: 10px;
+  color: #fd768e;
+  width: auto;
+  text-align: center;
+}
 .logo {
             width: 90px;
             height: 90px;
@@ -115,6 +121,8 @@ p2{
   color: black;
   align-items: center;
   margin: 7%;
+  color: pink;
+  padding-block: 80px;
 }
 .atalhos{
   text-align: center;
@@ -332,10 +340,10 @@ nav ul li a:hover {
     bottom: 10px;
     left: 10px;
     right: 10px;
-    background-color: #006500;
+    background-color: #ff6d87;
     color: #fff;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -449,10 +457,16 @@ body {
  <p1>
    <button class="rifa"> <a href="rifa.html">Acesse nossa Rifa do mês</a></button>
  </p1>
-  <h2>É novo por aqui?</h2>
- <p1>Temos os melhores produtos com as melhores condições de pagamento.
+  <h2 class="novo">É novo por aqui?</h2>
+ <p1 class="novo2">
+   <button class="rifa">
+     <a href="politica.html">
+       Temos os melhores produtos com as melhores condições de pagamento.
  Pagamentos facilitados mesmo para negativados e sem consulta ao <b>Spc</b> ou
- <b>Serasa</b>.<br> Entregamos em todos os bairros de <b>Rio Verde/GO</b>.</p1>
+ <b>Serasa</b>.<br> Entregamos em todos os bairros de <b>Rio Verde/GO</b>.
+     </a>
+   </button>
+ </p1>
 </div>
 
 <!---777777777777-->
@@ -470,8 +484,8 @@ os tipos de colchão.<br>
  <br>
 <p2 class="p2"><b>2</b> Unidades disponíveis. Cor: Cinza</p2>
 </h4>
-            <h4><strong>R$ 60,90</strong></h4>
-            <button class="btn" onclick="addToCart('Kit Cama cód.1012', 60.90)">Adicionar</button>
+            <h4><strong>R$ 140,90</strong></h4>
+            <button class="btn" onclick="addToCart('Kit Cama cód.1012', 140.90)">Adicionar</button>
         </div>
         <!-- Modal para exibir a imagem em tela cheia -->
     <div id="modal" class="modal">
@@ -572,7 +586,7 @@ os tipos de colchão.<br>
                 <input type="text" id="entregaResponsavel">
             </div>
         </div>
-        <button class="btn" onclick="finalizeOrder()"><b>Finalizar Pedido</b></button>
+        <button class="rifa" onclick="finalizeOrder()"><b>Finalizar Pedido</b></button>
     </div>
   
     <div id="notification" class="notification"></div>
@@ -587,4 +601,4 @@ os tipos de colchão.<br>
 </footer>
 <script src="script.js"></script>
 </body>
-</html>
+    </html>
