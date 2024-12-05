@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlowRv - Produtos em Promoção</title>
+    <style>
+        /* Estilos globais */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6f2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #fd768e;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            border-radius: 0 0 15px 15px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        header .logo img {
+            width: 100px;
+            border-radius: 50%;
+            animation: ripple 2s infinite;
+        }
+
+        @keyframes ripple {
+            0% {
+                box-shadow: 0 0 0 0 rgba(253, 118, 142, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 30px 30px rgba(253, 118, 142, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(253, 118, 142, 0);
+            }
+        }
+
+        /* Seções principais */
+        main {
+            padding: 20px;
+            width: 100%;
+            max-width: 1200px;
+            box-sizing: border-box;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        section h3 {
+            color: #fd768e;
+            border-bottom: 2px solid #fd768e;
+            padding-bottom: 5px;
+        }
+
+        .promo-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .promo-item {
+            background-color: #fff;
+            border: 1px solid #fd768e;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            width: calc(33.333% - 20px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            box-sizing: border-box;
+        }
+
+        .promo-item img {
+            max-width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .promo-item:hover {
+            transform: scale(1.05);
+        }
+
+        .promo-item h4 {
+            margin-top: 10px;
+        }
+
+        section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Botões */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #fd768e;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #fc607e;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #fd768e;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            border-radius: 15px 15px 0 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .promo-item {
+                width: calc(50% - 20px);
+            }
+
+            header .logo img {
+                width: 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .promo-item {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            header .logo img {
+                width: 60px;
+            }
+
+            main {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo GlowRv">
+        </div>
+        <h1>GlowRv</h1>
+        <h2>Produtos em Promoção</h2>
+    </header>
+
+    <main>
+        <section class="promo">
+            <h3>Ofertas Especiais</h3>
+            <p>Aproveite nossas ofertas especiais em produtos selecionados!</p>
+            <div class="promo-list">
+                <div class="promo-item">
+                    <img src="kit01.jpg" alt="Produto 1">
+                    <h4>Produto 1</h4>
+                    <p>Descrição do Produto 1.</p>
+                    <a href="loja.html" class="btn">Conferir</a>
+                </div>
+                <div class="promo-item">
+                    <img src="kit01.jpg" alt="Produto 2">
+                    <h4>Produto 2</h4>
+                    <p>Descrição do Produto 2.</p>
+                    <a href="loja.html" class="btn">Conferir</a>
+                </div>
+                <div class="promo-item">
+                    <img src="kit01.jpg" alt="Produto 3">
+                    <h4>Produto 3</h4>
+                    <p>Descrição do Produto 3.</p>
+                    <a href="loja.html" class="btn">Conferir</a>
+                </div>
+                <!-- Adicione mais produtos conforme necessário -->
+            </div>
+        </section>
+        <a href="index.html" class="btn">Voltar para a Loja</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 GlowRv. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Modal para imagem em tela cheia -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="imgModal">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const promoItems = document.querySelectorAll('.promo-item img');
+            const modal = document.getElementById('modal');
+            const modalImg = document.getElementById('imgModal');
+            const close = document.querySelector('.close');
+
+            // Exibir imagem em tela cheia
+            promoItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    modal.style.display = 'flex';
+                    modalImg.src = item.src;
+                });
+            });
+
+            close.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

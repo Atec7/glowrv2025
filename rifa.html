@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rifa Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="logo.jpg" alt="Logo" class="logo">
+            <p><strong>Período:</strong> 01/01/2025 - 31/01/2025</p>
+            <p><strong>Prêmio:</strong> Um Kit Cama</p>
+            <p><strong>Valor de Cada Número:</strong> R$ 5,00</p>
+            <img src="kit01.jpg" alt="Prêmio" class="prize-image" id="prizeImage">
+        </div>
+        <h1>Rifa da Glow💕</h1>
+        <p>Escolha um número entre 1 e 100:</p>
+        <div class="grid">
+            <!-- Números da rifa serão gerados aqui pelo JavaScript -->
+        </div>
+        <div class="form-container" id="form-container">
+            <h2>Preencha seus dados</h2>
+            <input type="text" id="nome" placeholder="Nome" required>
+            <input type="text" id="contato" placeholder="Contato (WhatsApp)" required>
+            <select id="pagamento" required>
+                <option value="">Forma de Pagamento</option>
+                <option value="Cartão">Cartão</option>
+                <option value="Pix">Pix</option>
+                <option value="Boleto">Boleto</option>
+            </select>
+            <input type="hidden" id="numerosEscolhidos">
+            <button type="button" id="enviar">Enviar</button>
+        </div>
+    </div>
+
+    <!-- Modal para imagem em tela cheia -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="imgModal">
+    </div>
+
+    <script src="rifa.js"></script>
+</body>
+</html>

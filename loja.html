@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlowRV2025</title>
+        <style>
+body {
+    font-family: Comic Sans MS;
+    margin: 0;
+    padding: 0;
+    background-color: #fd768e;
+    color: black;
+}
+
+.logo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 pink;
+            }
+            70% {
+                box-shadow: 0 0 30px 30px rgba(255, 102, 178, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 102, 178, 0);
+            }
+        }
+
+.corpo{
+  font-family: Comic Sans MS;;
+  width: 100%;
+  border-radius: 10px;
+  margin: 0px 0px;
+}
+header {
+font-family: Comic Sans MS;
+height: 246px;
+background: #fd768e;
+    background-size: cover;
+    padding: 1px;
+    color: white;
+    padding: 2px;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    width: 300px;
+}
+P{
+  font-size: 12px;
+  color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  text-align: left;
+  color: black;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+p{
+  text-align: left;
+  font-size: 15px;
+  color: #433131;
+}
+p1{
+  color: white;
+}
+h9{
+  text-align: center;
+}
+h3{
+  color:#fd768e ;
+}
+h4{
+  font-size: 17px;
+  color: #fd768e;
+}
+p2{
+  background-color: #fd768e;
+  color: white;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 15px;
+  padding: 10px;
+  text-align: center;
+}
+.p2{
+  text-align: center;
+}
+.footer{
+  text-align: center;
+  color: black;
+  align-items: center;
+  margin: 7%;
+}
+.atalhos{
+  text-align: center;
+  font-size: 16px;
+  padding: 2px;
+  padding-top: 2px;
+}
+
+.atalhos button{
+  padding: 5px;
+  color: white;
+  background-color: ;
+  border-style: solid 4px;
+  border-radius: 5px;
+  border-color: #fd768e;
+  padding-top: 2px;
+  width: 133px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.search-container {
+    display: block;
+    margin-top: 2px;
+    text-align: center;
+}
+
+#searchInput {
+    text-align: left;
+    width: 220px;
+    padding: 3px;
+    border: 5px solid white;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 14px;
+}
+
+button {
+    padding: 5px 5px;
+    border-radius: 0 10px 10px 0;
+    background-color: #fd768e;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+.rifa {
+  padding: 5px 5px;
+    border-radius: 10px;
+    background-color: #fd768e;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #fc2d51;
+    color: ;
+}
+
+nav ul li {
+    margin: 0 0px;
+}
+h1{
+  color: #fd768e;
+}
+nav ul li a {
+    color: #fd768e;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fa244a;
+}
+
+.container {
+    padding: 10px;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    max-width: 150px;
+    max-height: 160px;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #fd768e;
+}
+
+.btn {
+    background-color: #fd768e;
+    color: #ffffff;
+    border: white;
+    padding: 2px 2px;
+    border: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: green;
+}
+
+.hidden {
+    display: none;
+}
+
+#cartItems {
+    margin-bottom: 0px;
+}
+
+.cart-item {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddddd;
+    padding: 0px 0;
+}
+
+.cart-item p {
+    margin: 0px 0;
+    font-size: 0.9em;
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 0.9em;
+    display: block;
+}
+
+
+.notification {
+    background-color: pink; /* Laranja */
+    color: white;
+    padding: 15px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    z-index: 1000; /* Para garantir que a notificação fique acima de outros elementos */
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        bottom: 15px;
+        right: 15px;
+        border: white 1px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    nav ul li {
+        margin: 0px 0;
+        padding: 0px;
+    }
+}
+
+.cookie-consent {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: #006500;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+.cookie-consent p {
+    margin: 0;
+    color: white;
+}
+
+.cookie-consent a {
+    color: white;
+    text-decoration: underline;
+}
+
+.cookie-consent .accept-btn {
+    background-color: #fd768e;
+    color: #000;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cookie-consent .accept-btn:hover {
+    background-color: #fd768e;
+}
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.thumbnail {
+    width: 110px;
+    max-width: 300px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 600px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fd768e;
+    font-size: 90px;
+    font-weight: bold;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+  
+    <header>
+        <img src="logo.jpg" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('products')">Produtos |</a>
+                    <a href="#" onclick="showSection('cart')">Carrinho</a>
+                    </li>
+            </ul>
+        </nav>
+          <section class="atalhos">
+            <div class="">
+              <button class="atalhos">
+                <a href="promocao.html"><b>Promoções</b></a>
+                </button>
+                
+            <button class="">
+                <a href="rifa.html"><b>Rifa</b></a>
+                </button>
+            
+            <button class="">
+                <a href="politica.html"><b>Nossa política</b></a>
+                </button>
+              
+            <button class="">
+                <a href="sobre.html"><b>Sobre Nós</b></a>
+                </button>
+            </div>
+          </section>
+          <div class="search-container">
+        <input type="text" id="searchInput" placeholder="buscar...">
+        <button onclick="search()">🔍</button>
+    </div>
+    <div id="searchResults"></div>
+    </header>
+    <div id="home" class="container">
+ <h2></h2>
+ <p1>
+   <button class="rifa"> <a href="rifa.html">Acesse nossa Rifa do mês</a></button>
+ </p1>
+  <h2>É novo por aqui?</h2>
+ <p1>Temos os melhores produtos com as melhores condições de pagamento.
+ Pagamentos facilitados mesmo para negativados e sem consulta ao <b>Spc</b> ou
+ <b>Serasa</b>.<br> Entregamos em todos os bairros de <b>Rio Verde/GO</b>.</p1>
+</div>
+
+<!---777777777777-->
+    <div id="products" class="container hidden">
+        <div class="card">
+            <img src="kit01.jpg" alt="Produto" class="thumbnail">
+            <img src="kit0102.jpeg" alt="Produto" class="thumbnail">
+            <h3>Kit Cama</h3>
+            <p>cód.1012<br>Kit Cama: <br>
+• 2 Capas para travesseiro.<br>
+• 1 Capa para colchão Box, o material em elastano permite que se adapte a todos
+os tipos de colchão.<br>
+<h4>
+   <br>
+ <br>
+<p2 class="p2"><b>2</b> Unidades disponíveis. Cor: Cinza</p2>
+</h4>
+            <h4><strong>R$ 60,90</strong></h4>
+            <button class="btn" onclick="addToCart('Kit Cama cód.1012', 60.90)">Adicionar</button>
+        </div>
+        <!-- Modal para exibir a imagem em tela cheia -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="imgModal">
+    </div>
+<!---777777777777-->
+        <div class="card">
+            <img src="kit02.jpg" alt="Produto" class="thumbnail">
+            <img src="kit02.jpg" alt="Produto" class="thumbnail">
+            <h3>Kit 2 almofadas + nozinho</h3>
+            <p>cód.1011<br> Kit 2 almofadas + nozinho<br>
+ <br>
+<h4>
+  <p2 class="p2"><b>2</b> Unidades disponíveis. Cor: Rosa</p2>
+</h4>
+            <h4><strong>R$ 94,90</strong></h4>
+            <button class="btn" onclick="addToCart('Kit almofadas cód.1011', 94.90)">Adicionar</button>
+        </div>
+<!---777777777777-->
+        <div class="card">
+            <img src="kit03.jpg" alt="Produto" class="thumbnail">
+            <img src="kit0303.jpg" alt="Produto" class="thumbnail">
+            <h3>Colcha de cama Florada </h3>
+            <p>cód.1010<br>Colcha de Cama Florada:
+            <br>•1 Coberta florada.<br>
+            •2 Capas para travesseiro.
+ <br>
+ <br>
+<h4>
+  <p2 class="p2"><b>2</b> Unidades disponíveis. Cor: Florada</p2>
+</h4>
+            <h4><strong>R$ 80,90</strong></h4>
+            <button class="btn" onclick="addToCart('Colcha de cama cód.1010', 80.90)">Adicionar</button>
+        </div>
+<!---777777777777-->
+        <div class="card">
+            <img src="kit04.jpg" alt="Produto" class="thumbnail">
+            <img src="kit0404.jpg" alt="Produto" class="thumbnail">
+            <h3>Lençol avulso com elástico Preto </h3>
+            <p>cód.1013<br>Lençol avulso com elástico Preto
+            <br>•1 Lençol avulso com elástico Preto.
+ <br>
+ <br>
+<h4>
+  <p2 class="p2"><b>4</b> Unidades disponíveis. Cor: preta</p2>
+</h4>
+            <h4><strong>R$ 81,90</strong></h4>
+            <button class="btn" onclick="addToCart('Lençol avulso com elástico Preto cód.1013', 81.90)">Adicionar</button>
+        </div>
+<!---777777777777-->
+        
+        
+        
+        
+        
+ </div>
+</div>
+  
+  
+    <div id="cart" class="container hidden">
+        <h3></h3>
+        <div id="cartItems"></div>
+        <p><strong>Total: R$<span id="totalPrice">0.00</span></strong></p>
+        <div class="form-group">
+            <label for="deliveryOption">Opções de Entrega:</label>
+            <select id="deliveryOption" onchange="showDeliveryForm()">
+                <option value="">Selecione</option>
+                <option value="retirada">Retirada</option>
+                <option value="entrega">Entrega Taxa R$ 10,00</option>
+            </select>
+        </div>
+        <div id="retiradaForm" class="hidden">
+            <div class="form-group">
+                <label for="retiradaNome">Nome:</label>
+                <input type="text" id="retiradaNome">
+            </div>
+            <div class="form-group">
+                <label for="retiradaContato">Contato:</label>
+                <input type="text" id="retiradaContato">
+            </div>
+        </div>
+        <div id="entregaForm" class="hidden">
+            <div class="form-group">
+                <label for="entregaNome">Nome:</label>
+                <input type="text" id="entregaNome">
+            </div>
+            <div class="form-group">
+                <label for="entregaEndereco">Endereço Completo:</label>
+                <input type="text" id="entregaEndereco">
+            </div>
+            <div class="form-group">
+                <label for="entregaPagamento">Forma de Pagamento:</label>
+                <input type="text" id="entregaPagamento">
+            </div>
+            <div class="form-group">
+                <label for="entregaResponsavel">Responsável pelo Recebimento:</label>
+                <input type="text" id="entregaResponsavel">
+            </div>
+        </div>
+        <button class="btn" onclick="finalizeOrder()"><b>Finalizar Pedido</b></button>
+    </div>
+  
+    <div id="notification" class="notification"></div>
+    <div class="cookie-consent">
+        <p>a GlowRV2025 possui uma política clara para a compra de produtos
+        para pagamentos mensais. <a
+        href="politica.html"><b>Política compras</b></a>.</p>
+        <button class="accept-btn"><b>Aceitar</b></button>
+    </div>
+<footer>
+  <p class="footer">©GlowRv2025<br>todos os direitos reservados</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
